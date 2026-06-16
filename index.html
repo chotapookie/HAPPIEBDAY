@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MELI DIDI KE LIYE 💙</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+.floating-photo{
+position:fixed;
+opacity:0.20;
+z-index:-1;
+}
+
+.floating-photo img{
+width:220px;
+border-radius:20px;
+}
+
+/* Floating animation */
+
+@keyframes float {
+
+```
+0%{
+    transform:translateY(0px);
+}
+
+50%{
+    transform:translateY(-20px);
+}
+
+100%{
+    transform:translateY(0px);
+}
+```
+
+}
+
+.p1{
+top:10%;
+left:5%;
+animation:float 7s ease-in-out infinite;
+}
+
+.p2{
+top:15%;
+right:8%;
+animation:float 9s ease-in-out infinite;
+}
+
+.p3{
+bottom:12%;
+left:10%;
+animation:float 8s ease-in-out infinite;
+}
+
+.p4{
+bottom:10%;
+right:6%;
+animation:float 10s ease-in-out infinite;
+}
+.p5{
+    top:45%;
+    left:2%;
+    transform:rotate(-6deg);
+    animation:float 11s ease-in-out infinite;
+}
+
+.p6{
+    top:55%;
+    right:2%;
+    transform:rotate(12deg);
+    animation:float 12s ease-in-out infinite;
+}
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: "Baloo 2", cursive;
+    min-height:100vh;
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background: linear-gradient(
+        135deg,
+        #dff4ff,
+        #cbe7ff,
+        #b8ddff,
+        #eaf7ff
+    );
+}
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background: linear-gradient(
+        135deg,
+        #dff4ff,
+        #cbe7ff,
+        #b8ddff,
+        #eaf7ff
+    );
+}
+
+.container{
+    width:90%;
+    max-width:700px;
+    text-align:center;
+    z-index:2;
+}
+
+.note{
+    background:rgba(255,255,255,0.9);
+    backdrop-filter:blur(10px);
+    border-radius:25px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+#typedText{
+    font-size:20px;
+    line-height:1.8;
+    white-space:pre-line;
+    min-height:150px;
+}
+
+#openBtn{
+    margin-top:20px;
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:18px;
+
+    background:linear-gradient(
+        135deg,
+        #5ab7ff,
+        #7cc6ff
+    );
+
+    color:white;
+}
+
+#questionSection{
+    display:none;
+    margin-top:30px;
+}
+
+h1{
+    color:#1d5eff;
+    margin-bottom:30px;
+}
+
+#yesBtn,
+#noBtn{
+    border:none;
+    border-radius:50px;
+    padding:15px 30px;
+    cursor:pointer;
+    font-size:20px;
+    transition:0.3s;
+}
+
+#yesBtn{
+    background:linear-gradient(
+        135deg,
+        #5ab7ff,
+        #7cc6ff
+    );
+
+    color:white;
+}
+
+#noBtn{
+    background:#89a8ff;
+    color:white;
+    position:absolute;
+}
+
+#result{
+    display:none;
+    margin-top:40px;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+}
+
+.final-message{
+    width:45%;
+}
+
+#gif{
+    width:250px;
+    border-radius:20px;
+}
+
+#finalText{
+    font-size:26px;
+    color:#1d5eff;
+}
+
+.floating{
+    position:fixed;
+    font-size:28px;
+    opacity:0.5;
+    animation:floatUp linear infinite;
+}
+
+@keyframes floatUp{
+
+    from{
+        transform:translateY(100vh);
+    }
+
+    to{
+        transform:translateY(-120px);
+    }
+}
+
+#result{
+    display:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="floating-photo p1">
+    <img src="BEAUTIFOOL1.jpg">
+</div>
+
+<div class="floating-photo p2">
+    <img src="BEAUTIFOOL2.jpg">
+</div>
+
+<div class="floating-photo p3">
+    <img src="BEAUTIFOOL3.jpg">
+</div>
+
+<div class="floating-photo p4">
+    <img src=" BEAUTIFOOL4.jpg">
+</div>
+
+<div class="floating-photo p5">
+    <img src="BEAUTIFOOL5.jpg">
+</div>
+
+<div class="floating-photo p6">
+    <img src="BEAUTIFOOL6.jpg">
+</div>
+
+<div class="container">
+
+```
+<div class="note">
+    <div id="typedText"></div>
+</div>
+
+<button id="openBtn">
+    Open 💙
+</button>
+
+<div id="questionSection">
+
+    <h1>
+        Will you celebrate our birthday with the brightest smile? 🎂💙
+    </h1>
+
+    <button id="yesBtn">
+        YUPPII💙
+    </button>
+
+    <button id="noBtn">
+        NOPE :( 
+    </button>
+
+</div>
+
+<div id="result">
+
+    <video id="gif" autoplay loop muted playsinline>
+        <source src="HERBDAY.mp4" type="video/mp4">
+    </video>
+
+    <h2 id="finalText">
+        YAYAAYAYAY!! YOU SAID YUPPPPPPPPP❤❤
+        C.P SAYS I LOVE YOU💗🤍
+    </h2>
+
+    <h2 id="finalText" style="display:none;"></h2>
+        
+    </h2>
+
+</div>
+```
+
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="Glue Song.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+const openBtn = document.getElementById("openBtn");
+const questionSection = document.getElementById("questionSection");
+const note = document.querySelector(".note");
+
+const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
+
+const result = document.getElementById("result");
+const bgMusic = document.getElementById("bgMusic");
+
+
+// OPEN BUTTON
+openBtn.addEventListener("click",()=>{
+
+    openBtn.style.display="none";
+
+    questionSection.style.display="block";
+
+    bgMusic.volume = 0.5;
+
+    bgMusic.play()
+    .catch(error=>{
+        console.log("Music blocked", error);
+    });
+
+});
+
+
+// LETTER TYPEWRITER
+
+const letter = `
+
+YOU ARE THE BESTEST, THANKYOU FOL EVELYTHING YOUR
+ PRESENCE IS ALL I NEED
+ HAPPPIIEEE BDAYYYYYYY PAAAAGAL YAYAYAYAYA!!!
+
+`;
+
+let i = 0;
+
+const typedText = document.getElementById("typedText");
+
+
+function typeWriter(){
+
+    if(i < letter.length){
+
+        typedText.innerHTML += letter.charAt(i);
+
+        i++;
+
+        setTimeout(typeWriter,80);
+
+    }
+
+}
+
+typeWriter();
+
+
+// NO BUTTON RUN AWAY 😂
+
+let scale = 1;
+
+
+noBtn.addEventListener("mouseover",()=>{
+
+
+    const x = Math.random() * 
+    (window.innerWidth - 150);
+
+
+    const y = Math.random() *
+    (window.innerHeight - 100);
+
+
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+
+
+    scale += 0.15;
+
+    yesBtn.style.transform =
+    `scale(${scale})`;
+
+});
+
+
+// YES BUTTON
+
+yesBtn.addEventListener("click",()=>{
+
+    questionSection.style.display="none";
+
+    note.style.display="none";
+
+    result.style.display="flex";
+
+    document.getElementById("gif").play();
+
+});
+
+
+// FLOATING EMOJIS
+
+const emojis = [
+"💙",
+"✨",
+"🫂",
+"🎂"
+];
+
+
+setInterval(()=>{
+
+
+    const el = document.createElement("div");
+
+    el.classList.add("floating");
+
+
+    el.innerHTML =
+    emojis[Math.floor(
+    Math.random()*emojis.length)];
+
+
+    el.style.left =
+    Math.random()*100 + "vw";
+
+
+    el.style.animationDuration =
+    (6 + Math.random()*4)+"s";
+
+
+    document.body.appendChild(el);
+
+
+
+    setTimeout(()=>{
+
+        el.remove();
+
+    },10000);
+
+
+},800);
+
+
+</script>
+
+
+</body>
+</html>
